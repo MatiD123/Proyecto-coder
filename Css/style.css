@@ -10,14 +10,17 @@ font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
 
+/**header*/
 header {
     background-color: rgb(253, 181, 93);
-    padding: 2rem 0;
+    padding: 1.5rem 1.0rem;
 }
 
 header a {
     color: white;
     text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
 }
 
 .container-nav {
@@ -27,7 +30,8 @@ header a {
 }
 
 .titulo {
-    font-size: 2.5em;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 3.0em;
 }
 
 .navigation ul {
@@ -42,23 +46,34 @@ header a {
 
 .navigation ul li a {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 1.0rem 1.0rem;
 }
 
 .navigation ul li a:hover {
     background-color: rgb(104, 109, 107);
 }
 
+/**footer*/
 footer {
     background-color: antiquewhite;
     text-align: center;
     padding: 2rem 0;
 }
+.logof {
+    width: 50px;
+    height: 50px;
+}
+.logoi {
+    width: 50px;
+    height: 50px;
+}
 
+/**preguntas*/
 .preguntas {
     color: rgb(236, 216, 32);
 }
 
+/**formulario*/
 .titulo-formulario {
     font-size: 1.7rem;
     color: rgb(0, 0, 0);

@@ -20,7 +20,7 @@ header a {
     color: white;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.2rem;
 }
 
 .container-nav {
@@ -31,7 +31,7 @@ header a {
 
 .titulo {
     font-family: 'Noto Sans', sans-serif;
-    font-size: 3.0em;
+    font-size: 3.0rem;
 }
 
 .navigation ul {

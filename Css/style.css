@@ -38,7 +38,7 @@ header a {
     color: white;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .container-nav {
@@ -77,19 +77,43 @@ header a {
 
 footer {
     grid-area: footer;
-    background-color: antiquewhite;
-    text-align: center;
-    padding: 2rem 0;
+    background: #FF8008;
+    background: linear-gradient(to left, #FFC837, #FF8008);
+}
+.container-footer{
+margin: auto;
+}
+.lista-footer{
+    list-style: none;
+}
+.footer-col{
+   width: 25%;
+   padding: 1.0rem 1.5rem;
+}
+.footer-col h4{
+    font-family:'Raleway', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    position: relative;
 }
 
-.logof {
-    width: 50px;
-    height: 50px;
+.footer-col ul li a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    display: block;
+    color: rgb(5, 5, 4);
 }
-
-.logoi {
-    width: 50px;
-    height: 50px;
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+.redes-sociales{
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /**pages*/

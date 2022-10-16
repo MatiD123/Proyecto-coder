@@ -10,9 +10,27 @@ font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
 
-/**header*/
+/*grids**/
+
+.container-grid {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "footer footer footer footer"
+    ;
+}
+
 header {
-    background-color: rgb(253, 181, 93);
+    grid-area: header;
+    background: #FF8008;
+    background: linear-gradient(to left, #FFC837, #FF8008);
     padding: 1.5rem 1.0rem;
 }
 
@@ -53,27 +71,64 @@ header a {
     background-color: rgb(104, 109, 107);
 }
 
-/**footer*/
+/**main**/
+
+/**footer**/
+
 footer {
+    grid-area: footer;
     background-color: antiquewhite;
     text-align: center;
     padding: 2rem 0;
 }
+
 .logof {
     width: 50px;
     height: 50px;
 }
+
 .logoi {
     width: 50px;
     height: 50px;
 }
 
-/**preguntas*/
-.preguntas {
-    color: rgb(236, 216, 32);
+/**pages*/
+
+/**productos*/
+
+.productos-titulo{
+    font-family: 'Raleway', sans-serif;
+    padding: 0 0.5rem;
+    font-size: 2.0rem;
+}
+.productos-titulo::first-letter{
+    color: #FF8008;
+    font-size: 2.5rem;
 }
 
-/**formulario*/
+/**preguntasfrecuentes*/
+
+.preguntas-titulo{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.0rem;
+    padding: 1.0rem 0.5rem;
+}
+.preguntas-titulo::first-letter{
+    color: #FF8008;
+    font-size: 2.5rem;
+}
+.container-preguntas{
+    padding: 0.8rem 0.5rem;
+}
+.preguntas{ 
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    padding: 1.2rem 0rem;
+    text-decoration:underline
+}
+
+/**contacto*/
+
 .titulo-formulario {
     font-size: 1.7rem;
     color: rgb(0, 0, 0);
@@ -84,57 +139,48 @@ footer {
     justify-content: center;
 }
 
-
-/*grids**/
-
-.container {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-        "box-1 box-1"
-        "box-1 box-1"
-        "box-2 box-2"
-    ;
+/**acerca**/
+.acerca-titulo {
+    font-family: 'Raleway', sans-serif;
+    padding: 1.0rem 0.5rem;
 }
 
-.box-1 {
-    background-color: lightblue;
-    grid-area: box-1;
+.acerca-titulo::first-letter {
+    color: #FF8008;
+    font-size: 2.5rem;
 }
-
-.box-2 {
-    background-color: rgb(230, 204, 173);
-    grid-area: box-2;
+.acerca-texto{
+    padding: 1.0rem 0.8rem;
 }
 
 /*tablet***/
+
 @media (max-width: 768px) {
 
-    .container {
+    .container-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
-            "box-1 box-1"
-            "box-1 box-1"
-            "box-1 box-1"
-            "box-2 box-2"
+            "header header"
+            "main main"
+            "main main"
+            "footer footer"
         ;
     }
 }
 
 /**mobile*/
+
 @media (max-width:576px) {
 
-    .container {
+    .container-grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
-            "box-1"
-            "box-1"
-            "box-1"
-            "box-2"
+            "header"
+            "main"
+            "main"
+            "footer"
         ;
     }
 }

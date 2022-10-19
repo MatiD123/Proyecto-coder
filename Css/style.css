@@ -26,6 +26,7 @@ font-family: 'Raleway', sans-serif;
         "footer footer footer footer"
     ;
 }
+
 /**header*/
 
 header {
@@ -46,11 +47,16 @@ header a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .titulo {
     font-family: 'Noto Sans', sans-serif;
     font-size: 3.0rem;
+}
+
+.menu-icon{
+    display: none;
 }
 
 .navigation ul {
@@ -66,6 +72,8 @@ header a {
 .navigation ul li a {
     display: block;
     padding: 1.0rem 1.0rem;
+    transition: all 0.4s linear;
+    border-radius: 1.5px;
 }
 
 .navigation ul li a:hover {
@@ -73,7 +81,7 @@ header a {
 }
 
 /**main**/
-main{
+main {
     grid-area: main;
 }
 
@@ -84,19 +92,25 @@ footer {
     background: #FF8008;
     background: linear-gradient(to left, #FFC837, #FF8008);
     margin-top: auto;
+    width: 100%;
+    position: bottom;
 }
-.container-footer{
-margin: auto;
+
+.container-footer {
+    margin: auto;
 }
-.lista-footer{
+
+.lista-footer {
     list-style: none;
 }
-.footer-col{
-   width: 25%;
-   padding: 1.0rem 1.5rem;
+
+.footer-col {
+    width: 25%;
+    padding: 1.0rem 1.5rem;
 }
-.footer-col h4{
-    font-family:'Raleway', sans-serif;
+
+.footer-col h4 {
+    font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
     color: white;
     text-transform: capitalize;
@@ -104,18 +118,20 @@ margin: auto;
     position: relative;
 }
 
-.footer-col ul li a{
+.footer-col ul li a {
     font-size: 1.3rem;
     text-decoration: none;
     display: block;
     color: rgb(5, 5, 4);
 }
-.footer-row{
+
+.footer-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-} 
-.redes-sociales{
+}
+
+.redes-sociales {
     padding: 0.5rem 0;
     display: flex;
     justify-content: space-evenly;
@@ -123,40 +139,71 @@ margin: auto;
 
 /**pages*/
 
+/**index*/
+.main-index{
+    background-image: url(../Assets/fondo6.jpg);
+    height: 100vh;
+}
+.index-titulo{
+    color: white;
+    font-size: 3.0rem;
+    text-align: center;
+    padding-top: 3.0rem;
+}
 /**productos*/
+.main-productos {
+    height: 100vh;
+    background-image: url(../Assets/fondo1.jpg);
+}
 
-.productos-titulo{
+.productos-titulo {
     font-family: 'Raleway', sans-serif;
     padding: 0 0.5rem;
     font-size: 2.0rem;
     text-align: center;
 }
-.productos-titulo::first-letter{
+
+.productos-titulo::first-letter {
     color: #FF8008;
     font-size: 2.5rem;
 }
 
+.section1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /**preguntasfrecuentes*/
 
-.main-preguntas{
+.main-preguntas {
     height: 100vh;
     background-image: url(../Assets/fondo1.jpg);
 }
 
-.preguntas-titulo{
+.preguntas-titulo {
     font-family: 'Raleway', sans-serif;
     font-size: 2.0rem;
     padding: 1.0rem 0.5rem;
     text-align: center;
 }
-.preguntas-titulo::first-letter{
+
+.preguntas-titulo::first-letter {
     color: #FF8008;
     font-size: 2.5rem;
 }
-.container-preguntas{
+
+.container-preguntas {
     padding: 0.8rem 0.5rem;
 }
-.preguntas{ 
+
+.preguntas {
     font-size: 1.5rem;
     font-family: 'Raleway', sans-serif;
     padding: 1.2rem 0rem;
@@ -164,25 +211,26 @@ margin: auto;
 
 /**contacto*/
 
-.main-contacto{
+.main-contacto {
     height: 100vh;
-    background-image:url(../Assets/fondo3.jpg)
+    background-image: url(../Assets/fondo3.jpg)
 }
 
-.container-form .form .form-header .form-titulo{
+.container-form .form .form-header .form-titulo {
     font-weight: normal;
     font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 2.5rem;
     text-align: center;
 }
-.container-form .form .form-header .form-titulo::first-letter{
+
+.container-form .form .form-header .form-titulo::first-letter {
     color: #FF8008;
     font-size: 3.0rem;
 }
 
-.container-form .form{
-    background: rgba(0, 0, 0,.6);
+.container-form .form {
+    background: rgba(0, 0, 0, .6);
     width: 90%;
     max-width: 650px;
     margin: auto;
@@ -192,13 +240,15 @@ margin: auto;
     border-radius: 3px;
 }
 
-.container-form .form .form-label{
+.container-form .form .form-label {
     display: block;
     color: #FF8008;
     font-size: 1.2rem;
     position: relative;
 }
-.container-form .form .form-input, .form-textarea{
+
+.container-form .form .form-input,
+.form-textarea {
     background: rgba(236, 234, 234, 0.7);
     border: none;
     outline: none;
@@ -211,14 +261,15 @@ margin: auto;
     font-family: Arial;
 }
 
-.container-form .form .form-textarea{
+.container-form .form .form-textarea {
     resize: none;
     height: 120px;
 }
-.btn-submit{
+
+.btn-submit {
     width: 100%;
     outline: none;
-    background: #FF8008;
+    background: linear-gradient(to left, #FFC837, #FF8008);
     font-size: 1.0rem;
     border: none;
     color: white;
@@ -226,11 +277,13 @@ margin: auto;
     cursor: pointer;
     font-family: Arial;
 }
+
 /**acerca**/
-.main-acerca{
+.main-acerca {
     height: 100vh;
     background-image: url(../Assets/fondo5.jpg);
 }
+
 .acerca-titulo {
     font-family: 'Raleway', sans-serif;
     padding: 1.0rem 0.5rem;
@@ -242,16 +295,18 @@ margin: auto;
     color: #FF8008;
     font-size: 2.5rem;
 }
-.acerca-texto{
+
+.acerca-texto {
     padding: 1.0rem 0.8rem;
     color: white;
     font-size: 1.0rem;
     font-family: Arial;
+    line-height: 1.3rem;
 }
 
 /*tablet***/
 
-@media all and (max-width: 768px) {
+@media (max-width: 768px) {
     .container-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
@@ -263,6 +318,35 @@ margin: auto;
             "footer footer footer"
         ;
     }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        padding: 1.0rem 1.0rem;
+    }
+
+    .navigation {
+        width: 100%;
+        margin-top: 1.0rem;
+    }
+    
+    .navigation ul{
+        display: none;
+    }
+
+    .navigation ul.show{
+        display: block;
+    }
+
+    .navigation ul li {
+        display: block;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 1.0rem 0;
+        transition: all 0.4s linear;
+        border-radius: 1.5px;
+    }
 }
 
 /**mobile*/
@@ -270,13 +354,45 @@ margin: auto;
 @media (max-width:576px) {
 
     .container-grid {
+        height: 100vh;
+        width: auto;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         grid-template-areas:
             "header"
             "main"
             "main"
+            "main"
             "footer"
         ;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        padding: 1.0rem 1.0rem;
+    }
+
+    .navigation {
+        width: 100%;
+        margin-top: 1.0rem;
+    }
+    
+    .navigation ul{
+        display: none;
+    }
+
+    .navigation ul.show{
+        display: block;
+    }
+
+    .navigation ul li {
+        display: block;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 1.0rem 0;
+        transition: all 0.4s linear;
+        border-radius: 1.5px;
     }
 }
